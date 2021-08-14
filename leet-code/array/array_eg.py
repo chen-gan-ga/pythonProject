@@ -27,3 +27,4 @@ class MoveZeroes(object):
 
 shucu= MoveZeroes()
 print(shucu.solution3(m))
+print('测试上传')
