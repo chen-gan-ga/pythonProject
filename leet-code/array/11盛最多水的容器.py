@@ -29,8 +29,23 @@ print(answer.sol1())
 
 
 #最优
-class Solution:
+class BestSolution:
     def maxArea(self, height: List[int]) -> int:
         maxvol=0
         l,r=0,len(height)-1
         while l<r:
+            cur=min(height[r],height[l])
+            maxvol = max(maxvol,cur*(r-l))
+            if height[l]<height[r]:
+                while height[l]<=cur and l<r:
+                    l = l + 1
+            elif height[l]>height[r]:
+                while height[r] <= cur and l < r:
+                    r = r - 1
+            else:
+                l = l + 1
+                r = r - 1
+        return maxvol
+
+answer0=BestSolution()
+print(answer0.maxArea(num))
