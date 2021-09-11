@@ -12,6 +12,10 @@ class Sol(object):
              nums[i],nums[j]=nums[j],nums[i]
              j=j+1
      return nums
+ #哈希
+ # def moveZero1(self,nums):
+ #     for i in range(len(nums)):
+
 
 
 
